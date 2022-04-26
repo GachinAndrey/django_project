@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.shortcuts import render
 
-MENU_LINCS = {
+MENU_LINKS = {
     'index': 'Главная',
     'products': 'Продукты',
     'contact': 'Контакты',
