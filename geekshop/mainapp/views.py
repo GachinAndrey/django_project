@@ -1,5 +1,6 @@
-pipfrom django.urls import reverse
+from django.urls import reverse
 from django.shortcuts import render
+from .models import Category, Product
 
 MENU_LINKS = {
     "index": "Главная",
@@ -20,12 +21,17 @@ def main(request):
 
 
 def products(request):
+    categories = Category.objects.all()
+    products = Product.objects.all()[:6]
+
     return render(
         request,
         "mainapp/products.html",
         context={
             "title": "Продукты",
             "menu": MENU_LINKS,
+            "products": products,
+            "categories": categories,
         },
     )
 
