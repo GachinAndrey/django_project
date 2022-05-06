@@ -22,6 +22,6 @@ class UserEditForm(UserChangeForm):
 
     def clean_age(self):
         if self.cleaned_data['age'] < 18 :
-            raise forms.ValidationError("Вы ещё не достигли 18 лет!")
+            #raise forms.ValidationError("Вы ещё не достигли 18 лет!")
 
         return self.cleaned_data
