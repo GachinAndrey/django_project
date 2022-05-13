@@ -19,9 +19,3 @@ class UserEditForm(UserChangeForm):
     class Meta:
         model = ShopUser
         fields = ('username', 'first_name', 'last_name', 'email', 'city',)
-
-    def clean_age(self):
-        if self.cleaned_data['age'] < 18 :
-            #raise forms.ValidationError("Вы ещё не достигли 18 лет!")
-
-        return self.cleaned_data
