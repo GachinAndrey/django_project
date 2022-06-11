@@ -18,4 +18,4 @@ class RegisterForm(UserCreationForm):
 class UserEditForm(UserChangeForm):
     class Meta:
         model = ShopUser
-        fields = ('username', 'first_name', 'last_name', 'email', 'city',)
+        fields = ('username', 'first_name', 'last_name', 'image', 'email', 'city',)

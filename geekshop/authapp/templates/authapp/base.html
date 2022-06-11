@@ -9,20 +9,18 @@
             {% endblock %}
         </title>
         {% block css %}
-            <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+            <link rel="stylesheet" type="text/css" href="{% static 'pure-min.css'%}">
+            <link rel="stylesheet" type="text/css" href="{% static 'auth-style.css'%}">
         {% endblock %}
         {% block js %}
         {% endblock %}
     </head>
     <body>
-        <div class="container">
-            <div class="login">
-                <div class="h2 text-center head">
-                    {{ title }}
-                </div>
-                {% block content %}
-                {% endblock %}
-            </div>
+        <div class="content">
+            <a class="pure-button button-secondary" href="{% url 'index' %}"><-На сайт</a>
+            <h2>{{ title }}</h2>
+            {% block content %}
+            {% endblock %}
         </div>
     </body>
 </html>
